@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-image{
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-theme{
+  background-color: #3B7BBB;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.sidemenu{
+  transition: all ease 0.5s;
+  
+}
+.sidemenu.not-shown{
+  transform: translateX(-100%);
+}
+.sidemenu.shown{
+  transform: translateX(0%);
+}
