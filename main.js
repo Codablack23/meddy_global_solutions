@@ -33,29 +33,28 @@ const closeMenu=()=>{
    menu.classList.remove("shown")
    menu.classList.add("not-shown")
 }
-
-
-function main(){
-  let initSlide = 0;
-  const slides = document.querySelectorAll(".slide");
-  const indicators = document.querySelectorAll(".indicator");
-  const showMenuBtn = document.querySelector("#show-menu-btn");
-  const sideMenuLinks = document.querySelectorAll(".sidemenu-link");
-  const closeMenuBtn = document.querySelector("#close-menu-btn");
-
-  indicators.forEach((indicator,index)=>{
-    indicator.addEventListener('click',()=>{
-      initSlide = index
-      showSlide(index)
+const toggleScroll=(scrollbtn)=>{
+  const scrollHeight = window.scrollY
+  const windowHeight = window.innerHeight
+  if(scrollHeight >= (windowHeight/2)){
+    scrollbtn.classList.remove("hide")
+  }else{
+    scrollbtn.classList.add("hide")
+  }
+}
+function slideInit(){
+  try {
+    let initSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+    const indicators = document.querySelectorAll(".indicator");
+    indicators.forEach((indicator,index)=>{
+      indicator.addEventListener('click',()=>{
+        initSlide = index
+        showSlide(index)
+      })
     })
-  })
-  sideMenuLinks.forEach((link)=>{
-    link.addEventListener("click",closeMenu)
-  })
-  showMenuBtn.addEventListener('click',showMenu)
-  closeMenuBtn.addEventListener('click',closeMenu)
-  window.addEventListener("load",()=>{
     showSlide(initSlide)
+      
     setTimeout(()=>{
       setInterval(()=>{
         if(initSlide < (slides.length -1) ){
@@ -66,7 +65,29 @@ function main(){
         showSlide(initSlide)
       },5000)
     },5000)
+  } catch (error) {
+    console.log(error)
+  }
+}
+function setupSideMenu(){
+  try {
+    const showMenuBtn = document.querySelector("#show-menu-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+    showMenuBtn.addEventListener('click',showMenu)
+    closeMenuBtn.addEventListener('click',closeMenu)
+  } catch (error) {
+    console.log(error)
+  }
+}
+function main(){
+
+  const scrollbtn = document.querySelector("#scroll-to-top")
+  window.addEventListener("load",()=>{
+    toggleScroll(scrollbtn)
+    slideInit()
+    setupSideMenu()
   })
+  window.addEventListener("scroll",()=>toggleScroll(scrollbtn))
 }
 
 main()

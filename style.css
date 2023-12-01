@@ -26,3 +26,12 @@ html{
 .sidemenu.shown{
   transform: translateX(0%);
 }
+.scroll-to-top{
+  transition: all ease 0.5s;
+}
+.scroll-to-top.hide{
+  transform: translateY(200%);
+}
+.scroll-to-top.show{
+  transform: translateY(0%);
+}

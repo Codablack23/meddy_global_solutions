@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>MEDDY GLOBAL SOLUTIONS
+      </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+      *{
+        font-family: 'Barlow', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-image relative">
+    <script type="module" src="/main.js"></script>
+
+    <!-- SideMenu -->
+   
+    <div class="fixed sidemenu not-shown lg:hidden top-0 left-0 w-full h-full bg-white z-[30]">
+      <div class="mt-[54px] bg-image py-[70px] px-5">
+        <div class="my-2 text-right">
+          <button id="close-menu-btn">
+           <i class="bi bi-x-lg text-2xl"></i>
+          </button>
+         </div>
+         <a href="#who-we-are" class="mb-[10px] sidemenu-link inline-block  text-white bg-[#3B7BBB] rounded-[10px] py-[13px] px-[20px] capitalize w-[90%] sm:w-[80%] text-lg font-medium">Who we are</a>
+         <a href="#what-we-do" class="mb-[10px] sidemenu-link inline-block  text-white bg-[#3B7BBB] rounded-[10px] py-[13px] px-[20px] capitalize w-[90%] sm:w-[80%] text-lg font-medium">What we do</a>
+         <a href="#company-structure" class="mb-[10px] inline-block sidemenu-link  text-white bg-[#3B7BBB] rounded-[10px] py-[13px] px-[20px] capitalize w-[90%] sm:w-[80%]] text-lg font-medium">Company Structure</a>
+         <a href="#core-service" class="mb-[10px] inline-block sidemenu-link  text-white bg-[#3B7BBB] rounded-[10px] py-[13px] px-[20px] capitalize w-[90%] sm:w-[80%] text-lg font-medium">Core services</a>
+         <a href="#financial-cap" class="mb-[10px] inline-block sidemenu-link  text-white bg-[#3B7BBB] rounded-[10px] py-[13px] px-[20px] capitalize w-[90%] sm:w-[80%] text-lg font-medium">Financial Capabilities</a>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <header id="#top" class="py-2 sticky top-0 z-[10] bg-white">
+      <nav class="max-w-[1096px] mx-auto p-4 md:p-2 flex items-center">
+        <div class="flex-1 flex items-center">
+          <a href="/" class="lg:hidden">
+            <i class="bi bi-arrow-left text-2xl"></i>
+          </a>
+          <a href="/" class="inline-block mx-auto lg:mx-0">
+            <img class="max-w-[150px] md:max-w-[180px]" src="/logo.svg" alt="">
+          </a>
+        </div>
+        <div class="hidden lg:flex flex-2 items-center text-right gap-8 ml-auto font-semibold lg:text-lg">
+          <a href="#who-we-are">Who we are</a>
+          <a href="#what-we-do">What we do</a>
+          <a href="#company-structure">Company Structure</a>
+          <a href="#core-service">Core Service</a>
+          <a href="#financial-cap">Financial Capablities</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- scroll to top Link -->
+
+      <a href="#top" id="scroll-to-top" class="scroll-to-top hide fixed bottom-10 right-4 sm:right-8 md:right-14 z-[15] rounded-full ml-auto flex items-center justify-center w-[42px] h-[42px] sm:w-[56px] sm:h-[56px] md:w-[64px] md:h-[64px] bg-[#3B7BBB]">
+        <i class="bi bi-arrow-up text-xl sm:text-2xl md:text-4xl text-white"></i>
+       </a>
+       
+    <!-- Company Structure Section-->
+    <section class="py-[60px] sm:py-[128px] max-w-[1096px] mx-auto px-4 md:px-2" id="company-structure">
+        <h3 class="font-bold text-[24px] sm:text-[28px] md:text-[42px]] mb-[20px] text-center">Our Company Structure</h3>
+        <img src="/company-structure.jpg" class="rounded-[20px] hidden sm:block" alt="">
+        <div class="w-full">
+          <img src="/images/company-structure-sm.jpg" class="rounded-[20px] block w-full sm:hidden" alt="">
+        </div>
+      </section>
+
+    <footer class="pt-[40px] sm:pt-[180px] pb-[40px] sm:pb-[80px] bg-black text-white">
+      <div class="max-w-[1096px] p-4 md:p-2 mx-auto">
+        <div class="mx-w-[767px] mb-[60px]">
+          <h3 class="font-bold text-[24px] sm:text-[28px] md:text-[42px] mb-[12px]">Contact Us</h3>
+          <p class="text ml-[34px] font-bold sm:text-lg text-[#3B7BBB]">OFFICE ADDRESS</p>
+          <ul class="text-sm sm:text-lg">
+            <li class="flex gap-[10px] mb-[20px]">
+              <img class="h-[24px] w-[24px]" src="/icons/location.png" alt="">
+              <p class="leading-[22px] sm:leading-[30px]">40b Olanrewaju Ninalowo Crescent, Lekki Phase 1, Lagos, Nigeria</p>
+            </li>   
+             <li class="flex gap-[10px] mb-[20px]">
+              <img class="h-[24px] w-[24px]" src="/icons/phone.png" alt="">
+              <p class="leading-[22px] sm:leading-[30px]">+234 903 899 0494</p>
+            </li>    
+            <li class="flex gap-[10px] mb-[20px]">
+              <img class="h-[24px] w-[24px]" src="/icons/mail.png" alt="">
+              <p class="leading-[22px] sm:leading-[30px]">mglobalmglobalsolutions185@gmail.com</p>
+            </li>  
+          </ul>
+        </div>
+        <p class="mt-[150px] text-center text-xs sm:text-lg">ALL RIGHTS RESERVED  © 2023</p>
+      </div>
+    </footer>
+  </body>
+</html>
